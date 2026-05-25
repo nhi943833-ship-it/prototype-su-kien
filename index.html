@@ -403,6 +403,72 @@
     .qr-img{width:120px;height:120px}
   }
   .ev-tui-tag{display:inline-block;position:absolute;top:8px;left:8px;font-size:10px;font-weight:700;color:#fff;padding:3px 9px;border-radius:10px;z-index:3;box-shadow:0 1px 3px rgba(0,0,0,.15)}
+
+  /* ===== Gift selection modal (Chọn Quà Tặng) ===== */
+  .gift-modal-bg{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:400;display:none;align-items:center;justify-content:center;padding:14px;animation:fadeIn .15s ease}
+  .gift-modal-bg.show{display:flex}
+  .gift-modal{background:#fff;border-radius:14px;max-width:760px;width:100%;max-height:90vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.3);animation:slideUp .2s ease}
+  .gift-modal-head{background:linear-gradient(135deg,#fb923c,#ea580c);color:#fff;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+  .gift-modal-head h2{font-size:16px;font-weight:800;letter-spacing:.2px;line-height:1.3}
+  .gift-modal-head h2 span{color:#fff7ed}
+  .gift-modal-head .close-btn{background:rgba(255,255,255,.22);border:none;color:#fff;width:32px;height:32px;border-radius:50%;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.15s;flex-shrink:0}
+  .gift-modal-head .close-btn:hover{background:rgba(255,255,255,.38);transform:rotate(90deg)}
+
+  .gift-tabs{display:flex;background:#fff;border-bottom:1px solid #e5e7eb;flex-shrink:0}
+  .gift-tab{flex:1;padding:11px 14px;font-size:12.5px;font-weight:600;color:#9ca3af;background:#fff;border:none;border-bottom:3px solid transparent;cursor:pointer;transition:.15s;display:flex;align-items:center;justify-content:center;gap:6px}
+  .gift-tab.active{color:#ea580c;background:#fff7ed;border-bottom-color:#ea580c;font-weight:700}
+  .gift-tab:hover:not(.active){background:#fafafa;color:#6b7280}
+
+  .gift-budget-box{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;margin:12px 18px 0;padding:11px 16px;display:flex;flex-direction:column;gap:5px;flex-shrink:0}
+  .gift-budget-box .gbr{display:flex;justify-content:space-between;align-items:baseline;font-size:13px;color:#374151;font-weight:600}
+  .gift-budget-box .gbr b{font-size:15px;color:#ea580c;font-weight:800;font-variant-numeric:tabular-nums}
+  .gift-budget-box .gbr.chosen b{color:#15803d}
+  .gift-budget-box .gbr.remain b{color:#15803d}
+
+  .gift-modal-list{flex:1;overflow-y:auto;padding:12px 18px 8px;display:flex;flex-direction:column;gap:10px;background:#fafafa}
+  .gm-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:10px;padding:10px 12px;display:flex;flex-direction:column;gap:8px;cursor:pointer;transition:.15s}
+  .gm-card:hover{border-color:#fdba74;box-shadow:0 2px 8px rgba(249,115,22,.12)}
+  .gm-card.selected{border-color:#ea580c;background:#fff7ed;box-shadow:0 2px 10px rgba(234,88,12,.22)}
+  .gm-card.disabled{cursor:not-allowed}
+  .gm-card.disabled:hover{border-color:#e5e7eb;box-shadow:none}
+
+  .gm-pills{display:flex;gap:6px;flex-wrap:wrap}
+  .gm-pill{font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:12px;display:inline-flex;align-items:center;gap:3px;letter-spacing:.2px}
+  .gm-pill.later{background:#ffedd5;color:#9a3412}
+  .gm-pill.now{background:#dbeafe;color:#1e40af}
+  .gm-pill.ok{background:#dcfce7;color:#166534}
+  .gm-pill.no{background:#fef3c7;color:#92400e}
+
+  .gm-body{display:flex;gap:10px;align-items:flex-start}
+  .gm-img{width:60px;height:60px;flex-shrink:0;background:#f9fafb;border:1px solid #e5e7eb;border-radius:6px;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:4px}
+  .gm-img img{max-width:100%;max-height:100%;object-fit:contain}
+  .gm-info{flex:1;min-width:0}
+  .gm-name{font-size:13px;font-weight:600;color:#111827;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .gm-meta{font-size:11px;color:#6b7280;margin-top:3px;font-weight:500}
+
+  .gm-val-row{display:flex;justify-content:space-between;align-items:baseline;padding-top:6px;border-top:1px dashed #e5e7eb;font-size:12px;color:#374151;font-weight:600}
+  .gm-val-row b{font-size:14px;color:#ea580c;font-weight:800;font-variant-numeric:tabular-nums}
+
+  .gm-need{background:#fef3c7;border:1px solid #fde68a;color:#92400e;font-size:11.5px;font-weight:600;padding:6px 10px;border-radius:6px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+  .gm-need b{color:#dc2626;font-size:13px;font-weight:800;font-variant-numeric:tabular-nums}
+
+  .gm-empty{padding:36px 16px;text-align:center;color:#6b7280;font-size:13px;background:#fff;border:1px dashed #e5e7eb;border-radius:10px;line-height:1.6}
+
+  .gift-modal-foot{padding:12px 18px;background:#fff;border-top:1px solid #e5e7eb;flex-shrink:0}
+  .gift-confirm{width:100%;padding:13px;background:linear-gradient(135deg,#fb923c,#f97316);color:#fff;font-size:14px;font-weight:800;border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 12px rgba(249,115,22,.35);transition:.15s;letter-spacing:.3px}
+  .gift-confirm:hover:not(:disabled){filter:brightness(1.05);transform:translateY(-1px);box-shadow:0 6px 16px rgba(249,115,22,.45)}
+  .gift-confirm:disabled{background:#d1d5db;cursor:not-allowed;box-shadow:none;color:#6b7280}
+
+  @media(max-width:520px){
+    .gift-modal{max-height:95vh}
+    .gift-modal-head h2{font-size:14px}
+    .gift-tab{font-size:11.5px;padding:10px 8px}
+    .gift-budget-box{margin:10px 12px 0;padding:10px 12px}
+    .gift-modal-list{padding:10px 12px 6px}
+    .gift-modal-foot{padding:10px 12px}
+    .gm-img{width:52px;height:52px}
+    .gm-name{font-size:12.5px}
+  }
 </style>
 </head>
 <body>
@@ -613,6 +679,33 @@
   </div>
 </div>
 
+<!-- Gift selection modal (Chọn Quà Tặng cho túi) -->
+<div class="gift-modal-bg" id="giftModalBg">
+  <div class="gift-modal">
+    <div class="gift-modal-head">
+      <h2>🎁 Chọn Quà Tặng <span>(Ngân sách: <span id="giftBudgetTitle">0₫</span>)</span></h2>
+      <button class="close-btn" id="giftModalClose" type="button" aria-label="Đóng">✕</button>
+    </div>
+
+    <div class="gift-tabs">
+      <button class="gift-tab active" data-gtab="later" type="button">🎁 Giao Sau (<span id="gtCountLater">0</span> tùy chọn)</button>
+      <button class="gift-tab" data-gtab="now" type="button">🚚 Giao Ngay (<span id="gtCountNow">0</span> tùy chọn)</button>
+    </div>
+
+    <div class="gift-budget-box">
+      <div class="gbr"><span>Ngân sách quà tặng:</span><b id="gbBudget">0₫</b></div>
+      <div class="gbr chosen"><span>Đã chọn:</span><b id="gbChosen">0₫</b></div>
+      <div class="gbr remain"><span>Còn lại:</span><b id="gbRemain">0₫</b></div>
+    </div>
+
+    <div class="gift-modal-list" id="giftModalList"></div>
+
+    <div class="gift-modal-foot">
+      <button class="gift-confirm" id="giftConfirm" type="button" disabled>✓ Chọn quà tặng này</button>
+    </div>
+  </div>
+</div>
+
 <div class="toast" id="toast"></div>
 
 <script>window.MLBL_TODAY = '2026-05-22';</script>
@@ -750,6 +843,108 @@
         </div>`;
     }).join('');
   }
+
+  // ===== Gift selection modal (Chọn Quà Tặng — mở từ nút "🎁 Chọn quà" trên card túi) =====
+  const giftModal = { budget: 0, selected: null, tab: 'later' };
+
+  function openGiftModal(budget){
+    giftModal.budget = Math.round(budget || 0);
+    giftModal.selected = null;
+    giftModal.tab = 'later';
+    const giftCount = (D.gifts||[]).length;
+    document.getElementById('giftBudgetTitle').textContent = fmt(giftModal.budget);
+    document.getElementById('gbBudget').textContent = fmt(giftModal.budget);
+    document.getElementById('gbChosen').textContent = fmt(0);
+    document.getElementById('gbRemain').textContent = fmt(giftModal.budget);
+    document.getElementById('gtCountLater').textContent = giftCount;
+    document.getElementById('gtCountNow').textContent = 0;
+    document.querySelectorAll('.gift-tab').forEach(t => t.classList.toggle('active', t.dataset.gtab === 'later'));
+    renderGiftModalList();
+    updateGiftConfirmBtn();
+    document.getElementById('giftModalBg').classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeGiftModal(){
+    document.getElementById('giftModalBg').classList.remove('show');
+    document.body.style.overflow = '';
+  }
+
+  function renderGiftModalList(){
+    const list = document.getElementById('giftModalList');
+    if (giftModal.tab === 'now'){
+      list.innerHTML = `<div class="gm-empty">🚚 Chưa có quà tặng nào giao ngay.<br>Vui lòng chọn tab <b>Giao Sau</b> để xem 480 tùy chọn quà.</div>`;
+      return;
+    }
+    const gifts = (D.gifts||[]).slice().sort((a,b) => (a.GIA_TRI_GIFT_VAT||0) - (b.GIA_TRI_GIFT_VAT||0));
+    if (!gifts.length){
+      list.innerHTML = `<div class="gm-empty">Không có quà tặng nào.</div>`;
+      return;
+    }
+    list.innerHTML = gifts.map(g => {
+      const val = g.GIA_TRI_GIFT_VAT || 0;
+      const ok = val > 0 && val <= giftModal.budget;
+      const sel = giftModal.selected === g.SKU;
+      const need = Math.max(0, val - giftModal.budget);
+      return `
+        <div class="gm-card ${ok?'':'disabled'} ${sel?'selected':''}" data-sku="${g.SKU}" data-val="${val}" data-ok="${ok?1:0}">
+          <div class="gm-pills">
+            <span class="gm-pill later">🎁 Giao Sau</span>
+            <span class="gm-pill ${ok?'ok':'no'}">${ok?'✓ Đủ điều kiện':'🔒 Chưa đủ điều kiện'}</span>
+          </div>
+          <div class="gm-body">
+            <div class="gm-img">${imgTag(pickImg(g), g.PRODUCT_NAME, g.THUMBNAIL)}</div>
+            <div class="gm-info">
+              <div class="gm-name">${g.PRODUCT_NAME||''}</div>
+              <div class="gm-meta">${g.BRAND||''}${g.CATEGORY?' – '+g.CATEGORY:''}</div>
+            </div>
+          </div>
+          <div class="gm-val-row">
+            <span>Giá trị quà tặng:</span>
+            <b>${fmt(val)}</b>
+          </div>
+          ${!ok && need>0 ? `<div class="gm-need"><span>💰 Cần mua thêm:</span><b>${fmt(need)}</b></div>` : ''}
+        </div>`;
+    }).join('');
+    list.querySelectorAll('.gm-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const sku = card.dataset.sku;
+        const val = parseFloat(card.dataset.val) || 0;
+        const ok = card.dataset.ok === '1';
+        if (!ok){
+          toast('🔒 Mua thêm để mở khoá quà này');
+          return;
+        }
+        giftModal.selected = giftModal.selected === sku ? null : sku;
+        const chosen = giftModal.selected ? val : 0;
+        document.getElementById('gbChosen').textContent = fmt(chosen);
+        document.getElementById('gbRemain').textContent = fmt(Math.max(0, giftModal.budget - chosen));
+        list.querySelectorAll('.gm-card').forEach(c => c.classList.toggle('selected', c.dataset.sku === giftModal.selected));
+        updateGiftConfirmBtn();
+      });
+    });
+  }
+
+  function updateGiftConfirmBtn(){
+    document.getElementById('giftConfirm').disabled = !giftModal.selected;
+  }
+
+  document.getElementById('giftModalClose').addEventListener('click', closeGiftModal);
+  document.getElementById('giftModalBg').addEventListener('click', e => { if (e.target.id === 'giftModalBg') closeGiftModal(); });
+  document.querySelectorAll('.gift-tab').forEach(t => {
+    t.addEventListener('click', () => {
+      giftModal.tab = t.dataset.gtab;
+      document.querySelectorAll('.gift-tab').forEach(x => x.classList.toggle('active', x === t));
+      renderGiftModalList();
+    });
+  });
+  document.getElementById('giftConfirm').addEventListener('click', () => {
+    if (!giftModal.selected) return;
+    const g = (D.gifts||[]).find(x => String(x.SKU) === String(giftModal.selected));
+    const nm = g?.PRODUCT_NAME || '';
+    toast('✓ Đã chọn quà: ' + (nm.length>40 ? nm.slice(0,40)+'…' : nm));
+    closeGiftModal();
+  });
 
   // ===== Products =====
   function discountPct(p){
@@ -916,7 +1111,7 @@
         <div class="save-box">
           <div class="save-header">
             <span>NHÀ MÌNH TIẾT KIỆM ĐƯỢC</span>
-            <button class="gift-btn">🎁 Chọn quà</button>
+            <button class="gift-btn" data-budget="${t.gift}">🎁 Chọn quà</button>
           </div>
           <div class="save-row">
             <span class="lbl">MUA LỢI:</span>
@@ -991,8 +1186,9 @@
         const n = comboState[paneKey].qty[cid] || 0;
         if (n > 0) openCheckoutFromCombo(card, n);
       });
-      card.querySelector('.gift-btn').addEventListener('click', () => {
-        setActiveTab('gift'); window.scrollTo({top:0, behavior:'smooth'});
+      card.querySelector('.gift-btn').addEventListener('click', e => {
+        const budget = parseFloat(e.currentTarget.dataset.budget) || 0;
+        openGiftModal(budget);
       });
     });
   }
@@ -1410,7 +1606,7 @@
         <div class="save-box">
           <div class="save-header">
             <span>NHÀ MÌNH TIẾT KIỆM ĐƯỢC</span>
-            <button class="gift-btn">🎁 Chọn quà</button>
+            <button class="gift-btn" data-budget="${t.gift}">🎁 Chọn quà</button>
           </div>
           <div class="save-row">
             <span class="lbl">MUA LỢI:</span>
@@ -1453,8 +1649,9 @@
         const n = parseInt(qv.textContent,10);
         if (n>0) openCheckoutFromCombo(card, n);
       });
-      card.querySelector('.gift-btn').addEventListener('click', () => {
-        setActiveTab('gift'); window.scrollTo({top:0, behavior:'smooth'});
+      card.querySelector('.gift-btn').addEventListener('click', e => {
+        const budget = parseFloat(e.currentTarget.dataset.budget) || 0;
+        openGiftModal(budget);
       });
     });
   }
